@@ -1,7 +1,3 @@
-body {
-  scroll-behavior: smooth;
-}
-
 .App {
   background-color: #282c34;
   min-height: 100vh;
@@ -46,7 +42,6 @@ body {
   border-top: none;
   max-height: 200px;
   overflow-y: auto;
-  /* z-index: 1000; */
 }
 
 .suggestions-list::-webkit-scrollbar {
@@ -61,4 +56,20 @@ body {
 
 .suggestions-list li:hover {
   background-color: hsla(0, 5%, 72%, 0.618);
+}
+
+@media screen and (max-width: 700px) {
+  .App {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .header {
+    font-size: 2.5em;
+  }
+
+  .suggestions-list,
+  .search-input {
+    width: 50%;
+  }
 }
